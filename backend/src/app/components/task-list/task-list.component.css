@@ -1,0 +1,7 @@
+.task-card {
+  margin-bottom: 16px;
+}
+
+.completed {
+  opacity: 0.6;
+}

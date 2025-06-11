@@ -1,0 +1,16 @@
+<h2>{{ isEditMode ? 'Update Task' : 'Add New Task' }}</h2>
+
+<form (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="title" name="title" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>Description</mat-label>
+    <textarea matInput [(ngModel)]="description" name="description" required></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">{{ isEditMode ? 'Update' : 'Add' }}</button>
+  <button mat-button routerLink="/">Cancel</button>
+</form>

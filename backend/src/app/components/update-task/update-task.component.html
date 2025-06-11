@@ -1,0 +1,21 @@
+<h2>Update Task</h2>
+
+<form (ngSubmit)="updateTask()">
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="task.title" name="title" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <textarea matInput [(ngModel)]="task.description" name="description"></textarea>
+  </mat-form-field>
+
+  <mat-checkbox [(ngModel)]="task.completed" name="completed">
+    Completed
+  </mat-checkbox>
+
+  <button mat-raised-button color="primary" type="submit">
+    Update Task
+  </button>
+</form>
